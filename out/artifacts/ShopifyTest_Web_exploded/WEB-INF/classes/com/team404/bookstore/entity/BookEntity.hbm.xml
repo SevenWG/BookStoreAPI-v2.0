@@ -34,4 +34,7 @@
             <column name="inventory" sql-type="int(11)"/>
         </property>
     </class>
+
+    <query name="ListBookQuery">FROM BookEntity</query>
+    <query name="ListBookByCidQuery">FROM BookEntity WHERE categoryid = :categoryid</query>
 </hibernate-mapping>

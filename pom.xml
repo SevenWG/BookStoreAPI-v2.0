@@ -56,6 +56,57 @@
             <version>1.1.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet -->
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.27</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.27</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.27</version>
+        </dependency>
+
+
+        <!--&lt;!&ndash; JSON-P API &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>javax.json</groupId>-->
+            <!--<artifactId>javax.json-api</artifactId>-->
+            <!--<version>1.1</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; JSON-P RI &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish</groupId>-->
+            <!--<artifactId>javax.json</artifactId>-->
+            <!--<version>1.1</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; JSON-B API &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>javax.json.bind</groupId>-->
+            <!--<artifactId>javax.json.bind-api</artifactId>-->
+            <!--<version>1.0.0-RC2</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; Yasson (JSON-B RI) &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.eclipse</groupId>-->
+            <!--<artifactId>yasson</artifactId>-->
+            <!--<version>1.0.0-RC1</version>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
+
     </dependencies>
 
 </project>

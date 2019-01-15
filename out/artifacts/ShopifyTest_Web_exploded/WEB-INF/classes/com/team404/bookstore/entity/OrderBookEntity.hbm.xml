@@ -19,4 +19,6 @@
             <column name="quantity" sql-type="int(11)"/>
         </property>
     </class>
+
+    <query name="GetOrderBookByOidQuery">FROM OrderBookEntity WHERE orderid = :orderid</query>
 </hibernate-mapping>

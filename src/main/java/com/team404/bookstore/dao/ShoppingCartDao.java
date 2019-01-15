@@ -1,5 +1,6 @@
 package com.team404.bookstore.dao;
 
+import com.team404.bookstore.entity.BookEntity;
 import com.team404.bookstore.entity.ShoppingCartEntity;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -16,18 +17,30 @@ public class ShoppingCartDao implements DaoFactory {
     public boolean AddShoppingCart(ShoppingCartEntity shoppingCartEntity) {
         boolean flag = true;
         Session session = sessionFactory.openSession();
-
         Transaction transaction = null;
-        try {
-            transaction = session.beginTransaction();
-            session.save(shoppingCartEntity);
-            transaction.commit();
-        } catch (HibernateException e) {
-            if (transaction != null) transaction.rollback();
-            e.printStackTrace();
+
+        /*Check whether the book's inventory is less than customer's requirement quantities
+        * if it is, then return false to service layer
+        * else, add this shoppingCartEntity
+        * */
+        BookDao bookDao = new BookDao();
+        BookEntity bookEntity = bookDao.getEntityById(Integer.parseInt(shoppingCartEntity.getBookid()));
+
+        if(bookEntity.getInventory() < shoppingCartEntity.getQuantity()) {
             flag = false;
-        } finally {
-            session.close();
+        }
+        else {
+            try {
+                transaction = session.beginTransaction();
+                session.save(shoppingCartEntity);
+                transaction.commit();
+            } catch (HibernateException e) {
+                if (transaction != null) transaction.rollback();
+                e.printStackTrace();
+                flag = false;
+            } finally {
+                session.close();
+            }
         }
         return  flag;
     }
@@ -131,20 +144,29 @@ public class ShoppingCartDao implements DaoFactory {
         ShoppingCartEntity shoppingCartEntity1 = GetCartItem(shoppingCartEntity.getUserid(), shoppingCartEntity.getBookid());
         int previouQuantity = shoppingCartEntity1.getQuantity();
 
-        try {
-            transaction = session.beginTransaction();
-            Query query = session.getNamedQuery("UpdateItemQuantityQuery");
-            query.setParameter("quantity", shoppingCartEntity.getQuantity()+previouQuantity);
-            query.setParameter("id", shoppingCartEntity1.getId());
-            int result = query.executeUpdate();
-            System.out.println("Rows affected: " + result);
-            transaction.commit();
-        } catch (HibernateException e) {
-            if (transaction != null) transaction.rollback();
-            e.printStackTrace();
+        int totalQuantity = shoppingCartEntity.getQuantity() + previouQuantity;
+        BookDao bookDao = new BookDao();
+        BookEntity bookEntity = bookDao.getEntityById(Integer.parseInt(shoppingCartEntity.getBookid()));
+
+        if(bookEntity.getInventory() < totalQuantity) {
             flag = false;
-        }finally {
-            session.close();
+        }
+        else {
+            try {
+                transaction = session.beginTransaction();
+                Query query = session.getNamedQuery("UpdateItemQuantityQuery");
+                query.setParameter("quantity", totalQuantity);
+                query.setParameter("id", shoppingCartEntity1.getId());
+                int result = query.executeUpdate();
+                System.out.println("Rows affected: " + result);
+                transaction.commit();
+            } catch (HibernateException e) {
+                if (transaction != null) transaction.rollback();
+                e.printStackTrace();
+                flag = false;
+            }finally {
+                session.close();
+            }
         }
         return  flag;
     }

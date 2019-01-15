@@ -28,4 +28,6 @@
             <column name="userid" sql-type="int(11)"/>
         </property>
     </class>
+
+    <query name="getAddressByUidQuery">FROM AddressEntity WHERE userid = :userid</query>
 </hibernate-mapping>

@@ -9,7 +9,7 @@ public class HibernateConnection {
 
     private static SessionFactory setSessionFactory() {
         try {
-            sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+            sessionFactory = new Configuration().configure().buildSessionFactory();
             return sessionFactory;
         }
         catch (Throwable ex)

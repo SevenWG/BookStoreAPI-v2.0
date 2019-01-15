@@ -4,13 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.team404.bookstore.entity.ShoppingCartEntity" table="ShoppingCart" schema="shopify_test">
+    <class name="com.team404.bookstore.entity.OrderBookEntity" table="OrderBook" schema="shopify_test">
         <id name="id">
-            <column name="id" sql-type="int(11)"/>
+            <column name="id" sql-type="int(11) unsigned"/>
             <generator class="identity" />
         </id>
-        <property name="userid">
-            <column name="userid" sql-type="int(11)"/>
+        <property name="orderid">
+            <column name="orderid" sql-type="int(11)"/>
         </property>
         <property name="bookid">
             <column name="bookid" sql-type="varchar(20)" length="20"/>
@@ -19,4 +19,6 @@
             <column name="quantity" sql-type="int(11)"/>
         </property>
     </class>
+
+    <query name="GetOrderBookByOidQuery">FROM OrderBookEntity WHERE orderid = :orderid</query>
 </hibernate-mapping>

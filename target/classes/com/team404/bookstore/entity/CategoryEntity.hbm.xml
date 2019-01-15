@@ -13,4 +13,6 @@
             <column name="category" sql-type="varchar(200)" length="200"/>
         </property>
     </class>
+
+    <query name="ListCategoryQuery">FROM CategoryEntity </query>
 </hibernate-mapping>

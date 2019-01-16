@@ -183,7 +183,7 @@ public class OrderProcessAPI {
             boolean flag = shoppingCartDao.AddShoppingCart(shoppingCartEntity);
             if(!flag) {
                 String errorMessage = "Add Items Action Failed!";
-                return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag)).build();
+                return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag + " " + errorMessage)).build();
             }
             else {
                 return Response.status(Response.Status.OK).entity(jsonb.toJson(flag)).build();
@@ -194,7 +194,7 @@ public class OrderProcessAPI {
             boolean flag = shoppingCartDao.UpdateItemQuantity(shoppingCartEntity);
             if(!flag) {
                 String errorMessage = "Update Items Action Failed!";
-                return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag)).build();
+                return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag + " " +errorMessage)).build();
             }
             else {
                 return Response.status(Response.Status.OK).entity(jsonb.toJson(flag)).build();
@@ -209,9 +209,6 @@ public class OrderProcessAPI {
     /*
      * Implementation of Factory Pattern
      * */
-    /*java.lang.NullPointerException
-	com.team404.bookstore.service.OrderProcessAPI.DisplayShoppingCart(OrderProcessAPI.java:170)
-	原因：忘记实例化shoppingCartDao或者是忘记实例化daoFactory*/
 
     public Response DisplayShoppingCart(@PathParam("userid") int userid) {
 
@@ -270,6 +267,9 @@ public class OrderProcessAPI {
     public Response confirmOrder(@PathParam("orderid") int orderid) {
         countDao = new CountDao();
         orderDao = new OrderDao();
+        shoppingCartDao = new ShoppingCartDao();
+        orderServiceFacade = new OrderServiceFacade();
+
         boolean flag = true;
 
         if(countDao.getCount().getCounts() % 5 == 0 && countDao.getCount().getCounts() >= 5) {
@@ -280,7 +280,14 @@ public class OrderProcessAPI {
             countDao.CountUpdate();
             flag = true;
             orderDao.UpdateOrderStatus(orderid, flag);
+
+            OrdersEntity ordersEntity = orderDao.getEntityById(orderid);
+            int userid = ordersEntity.getUserid();
+            List<ShoppingCartEntity> list = shoppingCartDao.getListById(userid);
+            orderServiceFacade.updateBookInventory(list);
+            shoppingCartDao.DeleteShoppingItems(userid);
         }
+
         return Response.status(Response.Status.OK).entity(jsonb.toJson(flag)).build();
     }
 

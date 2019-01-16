@@ -1,6 +1,7 @@
 package com.team404.bookstore.service;
 
 import com.team404.bookstore.dao.*;
+import com.team404.bookstore.entity.BookEntity;
 import com.team404.bookstore.entity.OrderBookEntity;
 import com.team404.bookstore.entity.OrdersEntity;
 import com.team404.bookstore.entity.ShoppingCartEntity;
@@ -40,9 +41,9 @@ public class OrderServiceFacade {
 
         int id = orderDao.AddOrder(orderEntity);
 
-        createOrderBook(list, id);
+        this.createOrderBook(list, id);
 
-        shoppingCartDao.DeleteShoppingItems(userid);
+//        shoppingCartDao.DeleteShoppingItems(userid);
 
         return id;
 
@@ -50,12 +51,30 @@ public class OrderServiceFacade {
 
     private void createOrderBook(List<ShoppingCartEntity> list, int id) {
         OrderBookDao orderBookDao = new OrderBookDao();
+
         for(ShoppingCartEntity i : list) {
             OrderBookEntity orderBookEntity = new OrderBookEntity();
+
             orderBookEntity.setOrderid(id);
             orderBookEntity.setBookid(i.getBookid());
             orderBookEntity.setQuantity(i.getQuantity());
+
             orderBookDao.AddOrderBook(orderBookEntity);
+        }
+    }
+
+    public void updateBookInventory(List<ShoppingCartEntity> list) {
+        NewUnifiedDao newUnifiedDao = new NewUnifiedDao();
+        BookDao bookDao = new BookDao();
+
+        for(ShoppingCartEntity i : list) {
+            BookEntity bookEntity = bookDao.getEntityById(Integer.parseInt(i.getBookid()));
+
+            int newInventory = bookEntity.getInventory() - i.getQuantity();
+
+            bookEntity.setInventory(newInventory);
+
+            newUnifiedDao.UpdateEntity(bookEntity);
         }
     }
 }

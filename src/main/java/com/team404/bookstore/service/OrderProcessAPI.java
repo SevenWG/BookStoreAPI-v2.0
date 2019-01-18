@@ -48,13 +48,10 @@ public class OrderProcessAPI {
         }
     }
 
-    /*Submit Function*/
-    /*不同于之前项目里的注册方法，由于不熟悉POST方法，不知道如何通过Jersey传递对象，所以在接收前先提前将对象转换为了json字符串，该方法接收到数据后再转换回对象
-     * Different from the registration method in the previous project, because I am not familiar with the POST method, I don't know how to pass the object through Jersey.
+    /*Submit Function
+     *Different from the registration method in the previous project, because I am not familiar with the POST method, I don't know how to pass the object through Jersey.
      * So I convert the object to json string before receiving it. The method receives the data and then converts it back to the object.*/
     /*Reference:https://www.ibm.com/developerworks/cn/java/j-javaee8-json-binding-1/index.html?ca=drs-&utm_source=tuicool&utm_medium=referral*/
-    /*该方法目前无法用测试类测试，使用的测试工具为Restlet Client
-     * This method cannot currently be tested with a test class. The test tool used is the Restlet Client.*/
     /*
     When the user entity is NOT equals to null ( == null, do not use .equals())
     return HTTP 400 + wrong info message
@@ -209,7 +206,6 @@ public class OrderProcessAPI {
     /*
      * Implementation of Factory Pattern
      * */
-
     public Response DisplayShoppingCart(@PathParam("userid") int userid) {
 
         List<ShoppingCartEntity> list = (List<ShoppingCartEntity>)daoFactory.
@@ -240,9 +236,6 @@ public class OrderProcessAPI {
     @Path("/createOrder")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    /*获取自增id的配置！！！
-     * 在实体类的xml文件中的id的配置行中添加<generator class="identity" />
-     * */
     public Response createOrder(String json) {
 
         Jsonb jsonb = JsonbBuilder.create();
@@ -260,7 +253,7 @@ public class OrderProcessAPI {
         }
     }
 
-    /*Create Order Action*/
+    /*Confirm Order Action*/
     @GET
     @Path("/confirmOrder/{orderid}")
     @Produces(MediaType.APPLICATION_JSON)

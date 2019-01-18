@@ -21,7 +21,6 @@ public class OrderServiceFacade {
         AddressDao addressDao = new AddressDao();
         OrderDao orderDao = new OrderDao();
 
-
         TimeGeneratorInterface timeGenerator = new TimeGenerator();
         AmountCalculatorInterface amountCalculator = new AmountCalculator();
         PriceCalculatorInterface priceCalculator = new PriceCalculator();
@@ -42,8 +41,6 @@ public class OrderServiceFacade {
         int id = orderDao.AddOrder(orderEntity);
 
         this.createOrderBook(list, id);
-
-//        shoppingCartDao.DeleteShoppingItems(userid);
 
         return id;
 

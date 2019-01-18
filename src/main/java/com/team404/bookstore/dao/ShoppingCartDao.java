@@ -147,7 +147,10 @@ public class ShoppingCartDao implements DaoFactory {
         int totalQuantity = shoppingCartEntity.getQuantity() + previouQuantity;
         BookDao bookDao = new BookDao();
         BookEntity bookEntity = bookDao.getEntityById(Integer.parseInt(shoppingCartEntity.getBookid()));
-
+        /*Check whether the book's inventory is less than customer's requirement quantities
+         * if it is, then return false to service layer
+         * else, update this shoppingCartEntity
+         * */
         if(bookEntity.getInventory() < totalQuantity) {
             flag = false;
         }

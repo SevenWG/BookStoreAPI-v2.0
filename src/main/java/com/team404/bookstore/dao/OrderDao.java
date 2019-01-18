@@ -10,10 +10,6 @@ import java.util.List;
 
 public class OrderDao implements DaoFactory{
 
-    /*获取自增id的配置！！！
-    * 在实体类的xml文件中的id的配置行中添加<generator class="identity" />
-    * */
-
     public int AddOrder (OrdersEntity orderEntity) {
         Session session = HibernateConnection.getSession();
         int id = 0;

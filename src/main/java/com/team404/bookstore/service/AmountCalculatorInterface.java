@@ -5,5 +5,5 @@ import java.util.List;
  * Implementation of Facade Pattern
  * */
 public interface AmountCalculatorInterface<T> {
-    public int CalculateAmount(List<T> list);
+    int CalculateAmount(List<T> list);
 }

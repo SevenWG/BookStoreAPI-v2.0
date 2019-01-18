@@ -67,6 +67,21 @@ public class BookEntity {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "BookEntity{" +
+                "bookid='" + bookid + '\'' +
+                ", title='" + title + '\'' +
+                ", price=" + price +
+                ", author='" + author + '\'' +
+                ", categoryid=" + categoryid +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", description='" + description + '\'' +
+                ", publisherYear=" + publisherYear +
+                ", inventory=" + inventory +
+                '}';
+    }
+
     public Integer getPublisherYear() {
         return publisherYear;
     }

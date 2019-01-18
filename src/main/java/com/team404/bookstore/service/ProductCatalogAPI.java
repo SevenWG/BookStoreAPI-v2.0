@@ -42,6 +42,7 @@ public class ProductCatalogAPI {
         return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
 
+
     @GET
     @Path("/getProductList")
     @Produces(MediaType.APPLICATION_JSON)
@@ -53,7 +54,8 @@ public class ProductCatalogAPI {
 
         List<BookEntity> list = null;
 
-        list = (List<BookEntity>)daoFactory.ListSomethingById("BookDao", "getListById", 0);
+        list = (List<BookEntity>)daoFactory.ListSomethingById("BookDao",
+                "getListById", 0);
 
         return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
@@ -67,7 +69,6 @@ public class ProductCatalogAPI {
     return HTTP 400 + wrong info message
     otherwise, return 200 + list
     * */
-
     @GET
     @Path("/getProductList/{categoryid}")
     @Produces(MediaType.APPLICATION_JSON)

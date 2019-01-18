@@ -35,6 +35,7 @@
         </property>
     </class>
 
-    <query name="ListBookQuery">FROM BookEntity</query>
-    <query name="ListBookByCidQuery">FROM BookEntity WHERE categoryid = :categoryid</query>
+    <query name="ListBookQuery">FROM BookEntity WHERE inventory > 0</query>
+    <query name="ListBookByCidQuery">FROM BookEntity WHERE categoryid = :categoryid AND inventory > 0</query>
+
 </hibernate-mapping>

@@ -9,13 +9,8 @@ import java.math.BigDecimal;
 import java.util.*;
 
 
-/*通用DAO类的另外一种实现方式
-* 使用泛型，从而避免了使用Object而必须使用的强制转换
-* 通过对类型Object的引用来实现参数的“任意化”，“任意化”带来的缺点是要做显式的强制类型转换，
-* 而这种转换是要求开发者对实际参数类型可以预知的情况下进行的。
-* 对于强制类型转换错误的情况，编译器可能不提示错误，在运行的时候才出现异常，这是一个安全隐患。
-* 泛型的好处是在编译的时候检查类型安全，并且所有的强制转换都是自动和隐式的，提高代码的重用率
-* 参考：https://www.cnblogs.com/fanjingfeng/p/6713722.html
+/* Another implementation of the generic DAO class
+Reference: Https://www.cnblogs.com/fanjingfeng/p/6713722.html
 * */
 public class NewUnifiedDao<T> implements UnifiedDaoInterface<T> {
 

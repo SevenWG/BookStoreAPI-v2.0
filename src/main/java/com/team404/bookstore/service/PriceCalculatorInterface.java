@@ -8,6 +8,6 @@ import java.util.List;
  * Implementation of Facade Pattern
  * */
 public interface PriceCalculatorInterface {
-    public float CalculateTotalPrice(List<ShoppingCartEntity> list);
-    public OrdersEntity setMorePriceValues(OrdersEntity orderEntity, int userid);
+    float CalculateTotalPrice(List<ShoppingCartEntity> list);
+    OrdersEntity setMorePriceValues(OrdersEntity orderEntity, int userid);
 }

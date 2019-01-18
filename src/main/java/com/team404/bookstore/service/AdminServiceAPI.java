@@ -145,16 +145,16 @@ public class AdminServiceAPI<T> {
 
 
     /*
-    根据hql语句和参数动态输出查询结果列表
-    接收的form包括四个参数
-    "maxResults"：hql语句
-    "firstResult": 分页查询起始参数
-    "maxResults"： 分页查询末尾参数
-    "map": 携带hql语句中的具体参数值的 HashMap
-    以上四参数均为json格式
-    接收到form后，将form转换为MultivaluedMap
-    再依次根据form的栏目名将各参数转换为其对应格式
-    其中最为复杂的是map的格式转换，需要注意！
+     Dynamically output a list of query results based on hql statements and parameters
+     The received form includes four parameters
+     "maxResults": hql statement
+     "firstResult": paging query start parameter
+     "maxResults": paging query end parameter
+     "map": HashMap carrying the specific parameter values in the hql statement
+     The above four parameters are in json format
+     After receiving the form, convert the form to MultivaluedMap
+     Then convert each parameter to its corresponding format according to the column name of the form.
+     The most complicated of these is the format conversion of map, you need to pay attention!
     * */
     @POST
     @Path("/DynamicList")
@@ -169,17 +169,24 @@ public class AdminServiceAPI<T> {
         String maxResultsString = map.get("maxResults").toString().replaceAll("[\\[\\]]","");
         int firstResult = Integer.valueOf(firstResultString);
         int maxResults = Integer.valueOf(maxResultsString);
-        //两条语句不能合并
-        //必须先实例化map1，再赋值
+
+        /*
+        Two statements can not be combined
+          must first instantiate map1, then assign
+        */
         Map<String, Object> map1 = new HashMap<>();
         String temp = map.get("map").toString();
-        //去除首尾的[]符号，由于map内存在数组，同样使用[]，所以不能用之前的方式去除[]符号
+
+        /*Remove the first and last [] symbols,
+          because the map exists in the array also use [],
+          so you can not remove the [] symbol in the previous way
+        */
         String mapString = map.get("map").toString().substring(1, temp.length()-2);
         map1 = jsonb.fromJson(mapString, map1.getClass());
         /*
         !!!!!
-        原本map内存储的list或数组里的int变量，经过Rest后全部变成了BigDecimal类型
-        所以必须再转回int类型
+        The int variable in the list or array stored in the original map has become the BigDecimal type after the REST POST request,
+        so it must be converted back to the int type.
         * */
         Map<String, Object> newMap = Transform(map1);
 
@@ -190,7 +197,7 @@ public class AdminServiceAPI<T> {
         return response;
     }
 
-    /*将List或数组内的变量类型从BigDecimal转为int*/
+    /*Convert a variable type in a List or an array from BigDecimal to int*/
     public Map Transform(Map map) {
         Map<String, Object> newMap = new HashMap<>();
         if(map != null) {

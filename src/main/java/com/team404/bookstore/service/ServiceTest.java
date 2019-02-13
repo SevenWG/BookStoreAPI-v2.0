@@ -6,6 +6,7 @@ import com.team404.bookstore.entity.ShoppingCartEntity;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
+import java.math.BigDecimal;
 import java.util.List;
 
 public class ServiceTest {
@@ -20,6 +21,10 @@ public class ServiceTest {
 
         String json = jsonb.toJson(shoppingCartEntity);
         System.out.println(json);
+
+        BigDecimal n = new BigDecimal(Double.valueOf(4096*4096));
+        BigDecimal result = new BigDecimal(Double.valueOf(1));
+        System.out.println(result.divide(n).doubleValue());
 
     }
 }

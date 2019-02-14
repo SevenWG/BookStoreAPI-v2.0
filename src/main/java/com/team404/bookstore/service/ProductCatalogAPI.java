@@ -1,8 +1,6 @@
 package com.team404.bookstore.service;
 
-import com.team404.bookstore.dao.BookDao;
-import com.team404.bookstore.dao.CategoryDao;
-import com.team404.bookstore.dao.DaoFactoryImpl;
+import com.team404.bookstore.dao.*;
 import com.team404.bookstore.entity.BookEntity;
 import com.team404.bookstore.entity.CategoryEntity;
 
@@ -14,14 +12,15 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.List;
 
 @Path("/ProductCatalog")
 public class ProductCatalogAPI {
 
-    private CategoryDao categoryDao;
-    private BookDao bookDao;
-    private DaoFactoryImpl daoFactory = DaoFactoryImpl.SingleDaoFactory();
+    private UnifiedDaoInterface unifiedDao = new NewUnifiedDao();
+
     private static Jsonb jsonb = JsonbBuilder.create();
 
     @GET
@@ -35,9 +34,16 @@ public class ProductCatalogAPI {
     @Produces(MediaType.APPLICATION_JSON)
     /* gets the list of product categories for the store */
     public Response getCategoryList() {
-        categoryDao = new CategoryDao();
 
-        List<CategoryEntity> list = categoryDao.ListCategory();
+        String hql = "FROM CategoryEntity";
+
+        int firstResult = 0;
+
+        int maxResult = 0;
+
+        HashMap<String, Object> map = null;
+
+        List<CategoryEntity> list = unifiedDao.GetDynamicList(hql, 0, 0, map);
 
         return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
@@ -51,11 +57,15 @@ public class ProductCatalogAPI {
      * Implementation of Factory Pattern
      * */
     public Response getProductList() {
+        String hql = "FROM BookEntity WHERE inventory > 0";
 
-        List<BookEntity> list = null;
+        int firstResult = 0;
 
-        list = (List<BookEntity>)daoFactory.ListSomethingById("BookDao",
-                "getListById", 0);
+        int maxResult = 0;
+
+        HashMap<String, Object> map = null;
+
+        List<BookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
         return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
@@ -74,10 +84,17 @@ public class ProductCatalogAPI {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getProductList(@PathParam("categoryid") int categoryid) {
 
-        List<BookEntity> list = null;
+        String hql = "FROM BookEntity WHERE inventory > 0 and categoryid = :categoryid";
 
-        list = (List<BookEntity>)daoFactory.
-                ListSomethingById("BookDao", "getListById", categoryid);
+        int firstResult = 0;
+
+        int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("categoryid", categoryid);
+
+        List<BookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
         if(list.size() == 0) {
             String erroMessage = "Wrong Category or No book in this Category!";
@@ -101,12 +118,10 @@ public class ProductCatalogAPI {
     @Path("/getProductInfo/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getProductInfo(@PathParam("id") String id) {
-        BookEntity bookEntity = null;
-        boolean flag = false;
 
         int id_int = Integer.parseInt(id.trim());
 
-        bookEntity = (BookEntity)daoFactory.getEntityById("BookDao", "getEntityById", id_int);
+        BookEntity bookEntity = (BookEntity) unifiedDao.GetEntityById(BookEntity.class, id_int);
 
         if(bookEntity == null) {
             String errorMessage = "Wrong Book ID!";
@@ -127,16 +142,15 @@ public class ProductCatalogAPI {
     @Path("/getCategory/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCategory(@PathParam("id") int id) {
-        categoryDao = new CategoryDao();
 
-        CategoryEntity categoryEntity = categoryDao.getCategoryById(id);
+        CategoryEntity categoryEntity = (CategoryEntity) unifiedDao.GetEntityById(CategoryEntity.class, id);
 
         if(categoryEntity == null) {
             String errorMessage = "Wrong Category ID!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
         }
         else {
-            return Response.status(Response.Status.OK).entity(categoryEntity).build();
+            return Response.status(Response.Status.OK).entity(jsonb.toJson(categoryEntity)).build();
         }
 
     }

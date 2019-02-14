@@ -8,7 +8,9 @@ import javax.json.bind.JsonbBuilder;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Path("/OrderProcess")
@@ -19,6 +21,8 @@ public class OrderProcessAPI {
     private CountDao countDao;
     private OrderDao orderDao;
     private OrderBookDao orderBookDao;
+
+    private UnifiedDaoInterface unifiedDao = new NewUnifiedDao();
 
     private DaoFactoryImpl daoFactory = DaoFactoryImpl.SingleDaoFactory();
     private OrderServiceFacade orderServiceFacade;
@@ -31,19 +35,28 @@ public class OrderProcessAPI {
     otherwise, return 200 + user entity
     * */
     @GET
-    @Path("/GetUserByAccount/{userAccount}")
+    @Path("/GetUserByAccount/{username}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response GetUserByAccount(@PathParam("userAccount") String userAccount){
+    public Response GetUserByAccount(@PathParam("username") String username){
 
-        userDao = new UserDao();
+        String hql = "FROM UserEntity WHERE username = :username";
 
-        UserEntity userEntity = userDao.GetUserbyAccount(userAccount);
+        int firstResult = 0;
 
-        if(userEntity == null) {
+        int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("username", username);
+
+        List<UserEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
+
+        if(list.size() == 0) {
             String errorMessage = "Wrong user name, Cannot find this user!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
         }
         else {
+            UserEntity userEntity = list.get(0);
             return Response.status(Response.Status.OK).entity(jsonb.toJson(userEntity)).build();
         }
     }
@@ -64,26 +77,20 @@ public class OrderProcessAPI {
     public Response CreateAccount(String json) {
         boolean flag = true;
 
-        userDao = new UserDao();
-        addressDao = new AddressDao();
-
-        Jsonb jsonb = JsonbBuilder.create();
-
         UserAddressCombine userAddressCombine = jsonb.fromJson(json, UserAddressCombine.class);
 
         UserEntity userEntity = userAddressCombine.getUserEntity();
         AddressEntity addressEntity = userAddressCombine.getAddressEntity();
 
-        UserEntity userEntity1 = userDao.GetUserbyAccount(userEntity.getUsername());
+        Response response = this.GetUserByAccount(userEntity.getUsername());
 
-        if(userEntity1 != null) {
+        if(response.getStatusInfo().equals(Response.Status.OK)) {
             flag = false;
         }
         else {
-            int id = userDao.AddUser(userEntity);
+            int id = unifiedDao.AddEntity(userEntity);
             addressEntity.setUserid(id);
-            System.out.print(addressEntity.getUserid());
-            addressDao.AddAddress(addressEntity);
+            unifiedDao.AddEntity(addressEntity);
         }
 
         if(!flag) {
@@ -105,22 +112,27 @@ public class OrderProcessAPI {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getAccount(String json) {
+
         boolean flag = true;
-        userDao = new UserDao();
 
-        Jsonb jsonb = JsonbBuilder.create();
         UserEntity userEntity = jsonb.fromJson(json, UserEntity.class);
-        UserEntity userEntity1 = userDao.GetUserbyAccount(userEntity.getUsername());
 
-        if(userEntity1 != null){
+        Response response = this.GetUserByAccount(userEntity.getUsername());
+
+        if(response.getStatusInfo().equals(Response.Status.OK)){
+
+            UserEntity userEntity1 = jsonb.fromJson( (String) response.getEntity(), UserEntity.class);
+
             if(userEntity.getPassword().equals(userEntity1.getPassword())) {
                 flag = true;
             } else {
                 flag = false;
             }
+
         } else {
             flag = false;
         }
+
         if(!flag) {
             String errorMessage = "Get Account Failed!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag)).build();
@@ -134,9 +146,9 @@ public class OrderProcessAPI {
     @Path("/getUserinfo/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getUserinfo(@PathParam("id") int id) {
-        userDao = new UserDao();
 
-        UserEntity userEntity = userDao.GetUserById(id);
+        UserEntity userEntity = (UserEntity) unifiedDao.GetEntityById(UserEntity.class, id);
+
         if(userEntity == null) {
             String errorMessage = "Wroing User ID!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
@@ -151,15 +163,25 @@ public class OrderProcessAPI {
     @Path("/getAddressinfo/{userid}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAddressinfo(@PathParam("userid") int userid) {
-        addressDao = new AddressDao();
 
-        AddressEntity addressEntity = addressDao.getAddressByUid(userid);
+        String hql = "FROM AddressEntity WHERE userid = :userid";
 
-        if(addressEntity == null) {
+        int firstResult = 0;
+
+        int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("userid", userid);
+
+        List<AddressEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
+
+        if(list.size() == 0) {
             String errorMessage = "Wroing User ID!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
         }
         else  {
+            AddressEntity addressEntity = list.get(0);
             return Response.status(Response.Status.OK).entity(jsonb.toJson(addressEntity)).build();
         }
     }
@@ -172,13 +194,24 @@ public class OrderProcessAPI {
 
         shoppingCartDao = new ShoppingCartDao();
 
-        Jsonb jsonb = JsonbBuilder.create();
         ShoppingCartEntity shoppingCartEntity = jsonb.fromJson(json, ShoppingCartEntity.class);
 
-        if(shoppingCartDao.GetCartItem(shoppingCartEntity.getUserid(),
-                shoppingCartEntity.getBookid()) == null) {
-            boolean flag = shoppingCartDao.AddShoppingCart(shoppingCartEntity);
-            if(!flag) {
+        String hql = "FROM ShoppingCartEntity WHERE userid = :userid AND bookid = :bookid";
+
+        int firstResult = 0;
+
+        int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("userid", shoppingCartEntity.getUserid());
+        map.put("bookid", shoppingCartEntity.getBookid());
+
+        if(unifiedDao.GetDynamicList(hql, firstResult, maxResult, map).size() == 0) {
+
+            int flag = unifiedDao.AddEntity(shoppingCartEntity);
+
+            if(flag == 0) {
                 String errorMessage = "Add Items Action Failed!";
                 return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag + " " + errorMessage)).build();
             }
@@ -188,7 +221,7 @@ public class OrderProcessAPI {
         }
 
         else {
-            boolean flag = shoppingCartDao.UpdateItemQuantity(shoppingCartEntity);
+            boolean flag = unifiedDao.UpdateEntity(shoppingCartEntity);
             if(!flag) {
                 String errorMessage = "Update Items Action Failed!";
                 return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(flag + " " +errorMessage)).build();

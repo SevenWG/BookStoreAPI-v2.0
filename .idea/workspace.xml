@@ -6,78 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44a8163d-d3a8-41dc-95a5-c2968323e556" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/AddressDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/BookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/CategoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/CountDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/DaoFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/NewUnifiedDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/NewUnifiedDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/OrderBookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/ShoppingCartDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/UnifiedDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/entity/OrdersEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/entity/OrdersEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/AdminServiceAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/AdminServiceAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/AmountCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/AmountCalculatorInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/OrderProcessAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/OrderProcessAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/OrderServiceFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/PriceCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/PriceCalculatorInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/ServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/ServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/TimeGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/TimeGeneratorInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/AddressDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/BookDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/CategoryDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/CountDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/DaoFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/DaoFactoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/OrderBookDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/OrderDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/ShoppingCartDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/OrdersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/OrdersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AdminServiceAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AdminServiceAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AmountCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AmountCalculatorInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderServiceFacade.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculatorInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/TimeGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/TimeGeneratorInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/AddressDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/BookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/CategoryDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/CountDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/DaoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/DaoFactoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/NewUnifiedDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/NewUnifiedDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/OrderBookDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/ShoppingCartDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/UnifiedDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/entity/OrdersEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/entity/OrdersEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/AdminServiceAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/AdminServiceAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/AmountCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/AmountCalculatorInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/OrderProcessAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/OrderProcessAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/OrderServiceFacade.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/PriceCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/PriceCalculatorInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/ServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/ServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/TimeGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/TimeGeneratorInterface.class" beforeDir="false" />
-    </list>
+    <list default="true" id="44a8163d-d3a8-41dc-95a5-c2968323e556" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -528,7 +457,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550283403181" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550336062753" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -717,7 +646,7 @@
       <workItem from="1548381295959" duration="539000" />
       <workItem from="1548986231165" duration="1836000" />
       <workItem from="1549343894436" duration="37000" />
-      <workItem from="1550072633765" duration="28393000" />
+      <workItem from="1550072633765" duration="28689000" />
     </task>
     <servers />
   </component>
@@ -754,7 +683,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68609000" />
+    <option name="totallyTimeSpent" value="68905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

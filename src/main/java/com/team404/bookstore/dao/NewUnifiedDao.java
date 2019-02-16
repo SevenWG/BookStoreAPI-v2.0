@@ -179,7 +179,7 @@ public class NewUnifiedDao<T> implements UnifiedDaoInterface<T> {
         List<T> list = null;
 
         try {
-            Query query = GetQuery(session, hql, map);
+            Query query = this.GetQuery(session, hql, map);
             System.out.println(query);
             if(firstResult != 0 && maxResults != 0) {
                 list = query.setFirstResult(firstResult).setMaxResults(maxResults).list();
@@ -196,7 +196,7 @@ public class NewUnifiedDao<T> implements UnifiedDaoInterface<T> {
         return list;
     }
 
-    public Query GetQuery(Session session, String hql, Map<String, Object> map) {
+    private Query GetQuery(Session session, String hql, Map<String, Object> map) {
         Query query = session.createQuery(hql);
         if(map != null) {
             Set<String> keySet = map.keySet();

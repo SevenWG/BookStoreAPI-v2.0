@@ -1,6 +1,7 @@
 package com.team404.bookstore.service;
 
 import com.team404.bookstore.dao.NewUnifiedDao;
+import com.team404.bookstore.dao.UnifiedDaoInterface;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -12,7 +13,7 @@ import java.util.*;
 @Path("/AdminService")
 public class AdminServiceAPI<T> {
 
-    private NewUnifiedDao newUnifiedDao = new NewUnifiedDao();
+    private UnifiedDaoInterface newUnifiedDao = new NewUnifiedDao();
     private static Jsonb jsonb = JsonbBuilder.create();
 
     @POST

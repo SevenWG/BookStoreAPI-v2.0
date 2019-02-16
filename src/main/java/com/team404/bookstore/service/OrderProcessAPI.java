@@ -8,24 +8,13 @@ import javax.json.bind.JsonbBuilder;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 @Path("/OrderProcess")
 public class OrderProcessAPI {
-    private UserDao userDao;
-    private AddressDao addressDao;
-    private ShoppingCartDao shoppingCartDao;
-    private CountDao countDao;
-    private OrderDao orderDao;
-    private OrderBookDao orderBookDao;
 
     private UnifiedDaoInterface unifiedDao = new NewUnifiedDao();
-
-    private DaoFactoryImpl daoFactory = DaoFactoryImpl.SingleDaoFactory();
-    private OrderServiceFacade orderServiceFacade;
     private static Jsonb jsonb = JsonbBuilder.create();
 
     /* gets the user entity by user account .*/
@@ -41,9 +30,7 @@ public class OrderProcessAPI {
 
         String hql = "FROM UserEntity WHERE username = :username";
 
-        int firstResult = 0;
-
-        int maxResult = 0;
+        int firstResult = 0; int maxResult = 0;
 
         Map<String, Object> map = new HashMap<>();
 
@@ -166,9 +153,7 @@ public class OrderProcessAPI {
 
         String hql = "FROM AddressEntity WHERE userid = :userid";
 
-        int firstResult = 0;
-
-        int maxResult = 0;
+        int firstResult = 0; int maxResult = 0;
 
         Map<String, Object> map = new HashMap<>();
 
@@ -192,15 +177,11 @@ public class OrderProcessAPI {
     @Produces(MediaType.APPLICATION_JSON)
     public Response AddItemtoCart(String json) {
 
-        shoppingCartDao = new ShoppingCartDao();
-
         ShoppingCartEntity shoppingCartEntity = jsonb.fromJson(json, ShoppingCartEntity.class);
 
         String hql = "FROM ShoppingCartEntity WHERE userid = :userid AND bookid = :bookid";
 
-        int firstResult = 0;
-
-        int maxResult = 0;
+        int firstResult = 0; int maxResult = 0;
 
         Map<String, Object> map = new HashMap<>();
 
@@ -241,10 +222,17 @@ public class OrderProcessAPI {
      * */
     public Response DisplayShoppingCart(@PathParam("userid") int userid) {
 
-        List<ShoppingCartEntity> list = (List<ShoppingCartEntity>)daoFactory.
-                ListSomethingById("ShoppingCartDao", "getListById", userid);
+        String hql = "FROM ShoppingCartEntity WHERE userid = :userid";
 
-        return  Response.status(Response.Status.OK).entity(list).build();
+        int firstResult = 0; int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("userid", userid);
+
+        List<ShoppingCartEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
+
+        return  Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
 
     @DELETE
@@ -252,9 +240,8 @@ public class OrderProcessAPI {
     @Produces(MediaType.APPLICATION_JSON)
     /*Delete single item in shopping cart*/
     public Response DeleteSingleItem(@PathParam("id") int id) {
-        shoppingCartDao = new ShoppingCartDao();
-
-        boolean flag = shoppingCartDao.DeleteShoppingItemById(id);
+        ShoppingCartEntity shoppingCartEntity = (ShoppingCartEntity) unifiedDao.GetEntityById(ShoppingCartEntity.class, id);
+        boolean flag = unifiedDao.DeleteEntity(shoppingCartEntity);
 
         if(!flag) {
             String errorMessage = "Wroing Book ID! Delete Action Failed";
@@ -274,15 +261,54 @@ public class OrderProcessAPI {
         Jsonb jsonb = JsonbBuilder.create();
         int userid = jsonb.fromJson(json, int.class);
 
-        orderServiceFacade = new OrderServiceFacade();
+        Response response = this.DisplayShoppingCart(userid);
 
-        int id = orderServiceFacade.OrderGnerator(userid);
+        if(response.getStatus() == 200) {
 
-        if(id != 0)
-            return Response.status(Response.Status.OK).entity(jsonb.toJson(id)).build();
-        else{
-            String errorMessage = "Create Order Failed!";
-            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
+            ShoppingCartEntity[] arr = jsonb.fromJson(response.getEntity().toString(), ShoppingCartEntity[].class);
+
+            List<ShoppingCartEntity> list = Arrays.asList(arr);
+
+            int amount = this.CalculateAmount(list);
+
+            float totalprice = this.CalculateTotalPrice(list);
+
+            Response response1 = this.getAddressinfo(userid);
+
+            AddressEntity addressEntity = null;
+
+            if(response1.getStatus() == 200) {
+                addressEntity = jsonb.fromJson(response1.getEntity().toString(), AddressEntity.class);
+            }
+            else {
+                return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson("No Address Found!")).build();
+            }
+
+            boolean flag = true;
+
+            if(!addressEntity.getProvince().equals("ON")) {
+                flag = false;
+            }
+
+            int addressid = addressEntity.getId();
+
+            OrdersEntity ordersEntity = new OrdersEntity(userid, amount, addressid, totalprice, flag);
+
+            int id = unifiedDao.AddEntity(ordersEntity);
+
+            if(id != 0){
+                this.createOrderBook(list, id);
+                return Response.status(Response.Status.OK).entity(jsonb.toJson(id)).build();
+            }
+            else{
+                String errorMessage = "Create Order Failed!";
+                return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
+            }
+
+        }
+
+        else {
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson("Wrong User id!")).build();
         }
     }
 
@@ -291,30 +317,56 @@ public class OrderProcessAPI {
     @Path("/confirmOrder/{orderid}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response confirmOrder(@PathParam("orderid") int orderid) {
-        countDao = new CountDao();
-        orderDao = new OrderDao();
-        shoppingCartDao = new ShoppingCartDao();
-        orderServiceFacade = new OrderServiceFacade();
+
+        CountsEntity countsEntity = (CountsEntity) unifiedDao.GetEntityById(CountsEntity.class, 1);
+
+        OrdersEntity ordersEntity = (OrdersEntity) unifiedDao.GetEntityById(OrdersEntity.class, orderid);
 
         boolean flag = true;
 
-        if(countDao.getCount().getCounts() % 5 == 0 && countDao.getCount().getCounts() >= 5) {
-            countDao.CountUpdate();
-            flag = false;
-            orderDao.UpdateOrderStatus(orderid, flag);
-        }else {
-            countDao.CountUpdate();
-            flag = true;
-            orderDao.UpdateOrderStatus(orderid, flag);
+        if(ordersEntity.getStatus().equals("Processing")) {
 
-            OrdersEntity ordersEntity = orderDao.getEntityById(orderid);
-            int userid = ordersEntity.getUserid();
-            List<ShoppingCartEntity> list = shoppingCartDao.getListById(userid);
-            orderServiceFacade.updateBookInventory(list);
-            shoppingCartDao.DeleteShoppingItems(userid);
+            if(countsEntity.getCounts() % 5 == 0 && countsEntity.getCounts() >= 5) {
+
+                ordersEntity.setStatus("Failed");
+
+                flag = unifiedDao.UpdateEntity(ordersEntity);
+
+            }
+            else {
+                ordersEntity.setStatus("Success");
+
+                flag = unifiedDao.UpdateEntity(ordersEntity);
+
+                int userid = ordersEntity.getUserid();
+
+                Response response = this.DisplayShoppingCart(userid);
+
+                if(response.getStatus() == 200) {
+                    ShoppingCartEntity[] arr = jsonb.fromJson(response.getEntity().toString(), ShoppingCartEntity[].class);
+
+                    List<ShoppingCartEntity> list = Arrays.asList(arr);
+
+                    this.updateBookInventory(list);
+
+                    this.DeleteShoppingItems(list);
+
+                }
+                else {
+                    return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson("Wrong User id!")).build();
+                }
+            }
+
+            countsEntity.setCounts(countsEntity.getCounts() + 1);
+
+            unifiedDao.UpdateEntity(countsEntity);
+
+            return Response.status(Response.Status.OK).entity(jsonb.toJson(flag)).build();
         }
 
-        return Response.status(Response.Status.OK).entity(jsonb.toJson(flag)).build();
+        else {
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson("Cannot confirm finished Order!")).build();
+        }
     }
 
     @GET
@@ -322,9 +374,15 @@ public class OrderProcessAPI {
     @Produces(MediaType.APPLICATION_JSON)
     public Response DisplayMyOrder (@PathParam("userid") int userid) {
 
-        List<OrdersEntity> list =
-                (List<OrdersEntity>)daoFactory.
-                        ListSomethingById("OrderDao", "getListById", userid);
+        String hql = "FROM OrdersEntity WHERE userid = :userid";
+
+        int firstResult = 0; int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("userid", userid);
+
+        List<OrderBookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
         return  Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
@@ -333,10 +391,76 @@ public class OrderProcessAPI {
     @Path("/GetOrderBooks/{orderid}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response GetOrderBooks (@PathParam("orderid") int orderid) {
-        orderBookDao = new OrderBookDao();
 
-        List<OrderBookEntity> list = orderBookDao.GetOrderBookByOid(orderid);
+        String hql = "FROM OrderBookEntity WHERE orderid = :orderid";
 
-        return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
+        int firstResult = 0; int maxResult = 0;
+
+        Map<String, Object> map = new HashMap<>();
+
+        map.put("orderid", orderid);
+
+        List<OrderBookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
+
+        if(list.size() != 0) {
+            return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
+        }
+        else {
+            String errorMessage = "Wroing Order ID!";
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
+        }
+    }
+
+    public int CalculateAmount(List<ShoppingCartEntity> list) {
+        int amount = 0;
+        for(int i = 0; i < list.size(); i++){
+            ShoppingCartEntity shoppingCartEntity = list.get(i);
+            amount += shoppingCartEntity.getQuantity();
+        }
+        return amount;
+    }
+
+
+    private float CalculateTotalPrice(List<ShoppingCartEntity> list) {
+        float totalPrice = 0;
+
+        for(ShoppingCartEntity i : list) {
+            BookEntity bookEntity = (BookEntity) unifiedDao.GetEntityById(BookEntity.class, Integer.valueOf(i.getBookid()));
+            totalPrice += bookEntity.getPrice()*i.getQuantity();
+        }
+        return totalPrice;
+    }
+
+    private void createOrderBook(List<ShoppingCartEntity> list, int orderid) {
+
+        for(ShoppingCartEntity i : list) {
+            OrderBookEntity orderBookEntity = new OrderBookEntity();
+
+            orderBookEntity.setOrderid(orderid);
+            orderBookEntity.setBookid(i.getBookid());
+            orderBookEntity.setQuantity(i.getQuantity());
+
+            unifiedDao.AddEntity(orderBookEntity);
+        }
+    }
+
+    private void updateBookInventory(List<ShoppingCartEntity> list) {
+
+        for(ShoppingCartEntity i : list) {
+            BookEntity bookEntity = (BookEntity) unifiedDao.GetEntityById(BookEntity.class, Integer.parseInt(i.getBookid()));
+
+            int newInventory = bookEntity.getInventory() - i.getQuantity();
+
+            bookEntity.setInventory(newInventory);
+
+            unifiedDao.UpdateEntity(bookEntity);
+        }
+
+    }
+
+    private void DeleteShoppingItems(List<ShoppingCartEntity> list) {
+        for(ShoppingCartEntity i : list) {
+            unifiedDao.DeleteEntity(i);
+        }
     }
 }

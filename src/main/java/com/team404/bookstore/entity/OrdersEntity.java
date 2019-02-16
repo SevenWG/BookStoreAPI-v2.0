@@ -1,6 +1,11 @@
 package com.team404.bookstore.entity;
 
+import org.hibernate.criterion.Order;
+
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 public class OrdersEntity {
     private int id;
@@ -116,6 +121,9 @@ public class OrdersEntity {
         return true;
     }
 
+    public OrdersEntity() {
+    }
+
     @Override
     public int hashCode() {
         int result;
@@ -136,4 +144,34 @@ public class OrdersEntity {
         result = 31 * result + amount;
         return result;
     }
+
+    public OrdersEntity(int userid, int amount, int addressid, float totalprice, boolean flag) {
+        this.userid = userid;
+        this.generationtime = GetTimestampValue();
+        this.totalprice = totalprice;
+        this.addressid = addressid;
+        this.status = "Processing";
+        if(flag) {
+            this.shipping = 5;
+            this.tax = this.totalprice * 0.13;
+            this.aftertaxprice = this.totalprice + this.tax + this.shipping;
+        }
+        else {
+            this.shipping = 8;
+            this.tax = this.totalprice * 0.13;
+            this.aftertaxprice = this.totalprice + this.tax + this.shipping;
+        }
+        this.amount = amount;
+    }
+
+    private String GetOrderGenerationTime() {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return (String)df.format(new Date());
+    }
+
+    private Timestamp GetTimestampValue() {
+        String s = GetOrderGenerationTime();
+        return Timestamp.valueOf(s);
+    }
+
 }

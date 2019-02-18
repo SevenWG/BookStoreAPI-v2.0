@@ -28,7 +28,7 @@
 <br><br>
 <a href="http://101.132.77.215:8080/bookstore/rest/OrderProcess/DisplayMyOrder/1">Display someone's orders (userid:1,2,3....21)</a>
 <br><br>
-<p>For the other functions and operations, be sure to check my Github Repository:<p>
+<p>For the source code, be sure to check my Github Repository:<p>
 <a href="https://github.com/SevenWG">https://github.com/SevenWG</a>
 <br><br>
     <p>To clone this project:</p>

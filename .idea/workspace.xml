@@ -6,7 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44a8163d-d3a8-41dc-95a5-c2968323e556" name="Default Changelist" comment="" />
+    <list default="true" id="44a8163d-d3a8-41dc-95a5-c2968323e556" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ShopifyTest_Web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/NewUnifiedDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/dao/NewUnifiedDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/OrderProcessAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/OrderProcessAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/ProductCatalogAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/ProductCatalogAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/ServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded/WEB-INF/classes/com/team404/bookstore/service/ServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ProductCatalogAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ProductCatalogAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/NewUnifiedDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/dao/NewUnifiedDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/OrderProcessAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/OrderProcessAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/ProductCatalogAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/ProductCatalogAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/ServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/team404/bookstore/service/ServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,57 +67,59 @@
     <session id="585461346">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.12" value="3" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="62" />
-          <entry key="java" value="7590" />
+          <entry key="java" value="7760" />
+          <entry key="jsp" value="807" />
           <entry key="txt" value="12" />
-          <entry key="xml" value="169" />
+          <entry key="xml" value="234" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7590" />
+          <entry key="JAVA" value="7760" />
+          <entry key="JSP" value="807" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="Scratch" value="62" />
-          <entry key="XML" value="169" />
+          <entry key="XML" value="234" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="address" value="5" />
-          <entry key="book" value="16" />
-          <entry key="category" value="4" />
-          <entry key="class" value="1" />
+          <entry key="book" value="18" />
+          <entry key="category" value="5" />
+          <entry key="class" value="5" />
           <entry key="counts" value="3" />
-          <entry key="java" value="175" />
-          <entry key="jsp" value="1" />
+          <entry key="java" value="181" />
+          <entry key="jsp" value="3" />
           <entry key="orderbook" value="3" />
           <entry key="orders" value="10" />
           <entry key="shoppingcart" value="18" />
           <entry key="sql" value="1" />
           <entry key="user" value="10" />
-          <entry key="xml" value="44" />
+          <entry key="xml" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="Database Element" value="69" />
-          <entry key="JAVA" value="175" />
-          <entry key="JSP" value="1" />
+          <entry key="CLASS" value="5" />
+          <entry key="Database Element" value="72" />
+          <entry key="JAVA" value="181" />
+          <entry key="JSP" value="3" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="44" />
+          <entry key="XML" value="48" />
         </counts>
       </usages-collector>
     </session>
@@ -109,11 +129,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ProductCatalogAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="123" column="86" selection-start-line="123" selection-start-column="70" selection-end-line="123" selection-end-column="86" />
+            <state relative-caret-position="-640">
+              <caret line="94" column="26" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="20" column="114" selection-start-line="20" selection-start-column="114" selection-end-line="20" selection-end-column="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="149" column="26" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1310">
-              <caret line="177" column="39" lean-forward="true" selection-start-line="177" selection-start-column="39" selection-end-line="177" selection-end-column="39" />
+            <state relative-caret-position="1380">
+              <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,40 +175,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDaoInterface.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2655">
-              <caret line="177" column="48" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AdminServiceAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/orders">
+        <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/category">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -176,13 +202,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/OrdersEntity.java">
+        <entry file="jar://$PROJECT_DIR$/lib/ext/javax.json.bind-api-1.0.jar!/javax/json/bind/Jsonb.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="175" selection-start-line="175" selection-end-line="175" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/ext/yasson-1.0.jar!/org/eclipse/yasson/internal/JsonBinding.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -209,8 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/UserEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/ShoppingCartEntity.hbm.xml" />
@@ -220,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/AddressEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/BookEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/CategoryEntity.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/HibernateConnection.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/team404/bookstore/entity/CountsEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/team404/bookstore/entity/OrderBookEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
@@ -231,7 +260,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculatorInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/TimeGeneratorInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/com/team404/bookstore/service/ProductCatalogAPITest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/BookEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/com/team404/bookstore/service/OrderProcessAPITest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ProductCatalogAPITest.java" />
@@ -239,12 +267,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderServiceFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/BookDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDaoInterface.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ProductCatalogAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/OrdersEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AdminServiceAPI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ProductCatalogAPI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mariadb/jdbc/Driver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/HibernateConnection.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -270,11 +303,16 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="ShopifyTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="824" />
@@ -285,54 +323,378 @@
         <expanded-state>
           <State />
           <State>
+            <id>Abstraction issuesJava</id>
+          </State>
+          <State>
+            <id>AccessibilityLintAndroid</id>
+          </State>
+          <State>
             <id>Android</id>
           </State>
           <State>
-            <id>Application Servers</id>
+            <id>Angular</id>
+          </State>
+          <State>
+            <id>Assignment issuesGroovy</id>
+          </State>
+          <State>
+            <id>Assignment issuesJava</id>
+          </State>
+          <State>
+            <id>Bidirectional TextInternationalizationLintAndroid</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJava</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
           </State>
           <State>
             <id>CDI (Contexts and Dependency Injection)</id>
           </State>
           <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Chrome OSCorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Class metricsJava</id>
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Cloning issuesJava</id>
+          </State>
+          <State>
+            <id>Code maturityJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>CollectionsScala</id>
+          </State>
+          <State>
+            <id>ComparingCollectionsScala</id>
+          </State>
+          <State>
+            <id>Compiler issuesJava</id>
+          </State>
+          <State>
+            <id>Control flow issuesJava</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
             <id>CorrectnessLintAndroid</id>
           </State>
           <State>
-            <id>Faces Model</id>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flowJava</id>
+          </State>
+          <State>
+            <id>Data flowJavaScript</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>EncapsulationJava</id>
+          </State>
+          <State>
+            <id>Error handlingGroovy</id>
+          </State>
+          <State>
+            <id>Error handlingJava</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>FinalizationJava</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>GeneralScala</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Guice</id>
+          </State>
+          <State>
+            <id>IconsUsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>ImportsJava</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>InitializationJava</id>
+          </State>
+          <State>
+            <id>Internationalization</id>
+          </State>
+          <State>
+            <id>InternationalizationJava</id>
+          </State>
+          <State>
+            <id>InternationalizationLintAndroid</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
+          </State>
+          <State>
+            <id>JBoss Seam</id>
+          </State>
+          <State>
+            <id>JSON and JSON5</id>
           </State>
           <State>
             <id>JSP</id>
           </State>
           <State>
+            <id>JUnitJava</id>
+          </State>
+          <State>
             <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 9Java language level migration aidsJava</id>
           </State>
           <State>
             <id>Java EE</id>
           </State>
           <State>
+            <id>Java interop issuesKotlin</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaBeans issuesJava</id>
+          </State>
+          <State>
+            <id>JavaFX</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavadocJava</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
             <id>LintAndroid</id>
           </State>
           <State>
-            <id>Maven</id>
+            <id>LintLintAndroid</id>
+          </State>
+          <State>
+            <id>LoggingJava</id>
+          </State>
+          <State>
+            <id>MemoryJava</id>
+          </State>
+          <State>
+            <id>MessagesCorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Method metricsGroovy</id>
+          </State>
+          <State>
+            <id>Method metricsJava</id>
+          </State>
+          <State>
+            <id>Naming conventionsJava</id>
+          </State>
+          <State>
+            <id>Naming conventionsKotlin</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>Other problemsKotlin</id>
+          </State>
+          <State>
+            <id>OtherGroovy</id>
           </State>
           <State>
             <id>PerformanceJava</id>
           </State>
           <State>
+            <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>Plugin DevKit</id>
+          </State>
+          <State>
             <id>PortabilityJava</id>
           </State>
           <State>
-            <id>Resource managementJava</id>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>Probable bugsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsKotlin</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>Reactor</id>
+          </State>
+          <State>
+            <id>Redundant constructsKotlin</id>
           </State>
           <State>
             <id>SQL</id>
           </State>
           <State>
-            <id>WebSocket</id>
+            <id>Scala</id>
+          </State>
+          <State>
+            <id>SecurityJava</id>
+          </State>
+          <State>
+            <id>SecurityLintAndroid</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+          <State>
+            <id>Simplifications: otherCollectionsScala</id>
+          </State>
+          <State>
+            <id>SizeCollectionsScala</id>
+          </State>
+          <State>
+            <id>Spelling</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring BootSpring</id>
+          </State>
+          <State>
+            <id>Spring CloudSpring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring DataSpring</id>
+          </State>
+          <State>
+            <id>Spring OSGiSpring</id>
+          </State>
+          <State>
+            <id>Style issuesKotlin</id>
+          </State>
+          <State>
+            <id>Syntactic ClarificationScala</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>TypographyUsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>UI Form</id>
+          </State>
+          <State>
+            <id>UsabilityLintAndroid</id>
+          </State>
+          <State>
+            <id>Verbose or redundant code constructsJava</id>
+          </State>
+          <State>
+            <id>VisibilityJava</id>
+          </State>
+          <State>
+            <id>WSDL</id>
+          </State>
+          <State>
+            <id>Web Services</id>
+          </State>
+          <State>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>XMLSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>MavenModelInspection</id>
+            <id>Android</id>
           </State>
         </selected-state>
       </profile-state>
@@ -351,17 +713,6 @@
             <path>
               <item name="ShopifyTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="ShopifyTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopifyTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShopifyTest" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopifyTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ShopifyTest" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ShopifyTest" type="b2602c69:ProjectViewProjectNode" />
@@ -426,10 +777,7 @@
             <path>
               <item name="ShopifyTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="ShopifyTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ShopifyTest" type="b2602c69:ProjectViewProjectNode" />
@@ -457,14 +805,14 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550336062753" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550519532153" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.38821328" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
@@ -496,6 +844,34 @@
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ECS on Alibaba Cloud" type="ECS_RUN_CONFIGRATION" factoryName="Ecs configuration factory">
+      <option name="artifactPath" value="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web/ShopifyTest_Web.war" />
+      <option name="command" value="systemctl restart tomcat" />
+      <option name="deployLocation" value="/var/lib/tomcat/webapps" />
+      <option name="deployType" value="file" />
+      <option name="filter" value="Please enter private ip,seperated by comma" />
+      <option name="goals" />
+      <option name="instanceList">
+        <list>
+          <EcsInstance>
+            <option name="instanceId" value="i-uf690panxfgkmj01c5bn" />
+            <option name="instanceName" value="iZuf690panxfgkmj01c5bnZ" />
+            <option name="netType" />
+            <option name="privateIps" value="172.19.114.37" />
+            <option name="publicIps" value="101.132.77.215" />
+            <option name="regionId" />
+            <option name="tags" />
+          </EcsInstance>
+        </list>
+      </option>
+      <option name="pageNum" value="1" />
+      <option name="projctIdentity" />
+      <option name="region" value="cn-shanghai" />
+      <option name="targetPath" />
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean install" />
       </method>
     </configuration>
     <configuration name="OrderProcessAPITest.testAddItemtoCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -612,6 +988,7 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="ECS on Alibaba Cloud.ECS on Alibaba Cloud" />
       <item itemvalue="Application.ServiceTest" />
       <item itemvalue="JUnit.OrderProcessAPITest.testAddItemtoCart" />
       <item itemvalue="JUnit.OrderProcessAPITest.testAddTooManyItemtoCart" />
@@ -646,7 +1023,11 @@
       <workItem from="1548381295959" duration="539000" />
       <workItem from="1548986231165" duration="1836000" />
       <workItem from="1549343894436" duration="37000" />
-      <workItem from="1550072633765" duration="28689000" />
+      <workItem from="1550072633765" duration="29165000" />
+      <workItem from="1550375593764" duration="3679000" />
+      <workItem from="1550501800093" duration="1278000" />
+      <workItem from="1550507012251" duration="3691000" />
+      <workItem from="1550519652008" duration="3256000" />
     </task>
     <servers />
   </component>
@@ -683,7 +1064,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68905000" />
+    <option name="totallyTimeSpent" value="81285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -695,34 +1076,76 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6164154" visible="true" weight="0.25250357" />
-      <window_info id="Structure" order="1" sideWeight="0.3835846" side_tool="true" visible="true" weight="0.25250357" />
-      <window_info id="Persistence" order="2" sideWeight="0.18412162" side_tool="true" weight="0.25679544" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Image Layers" order="7" />
-      <window_info id="Learn" order="8" />
-      <window_info id="Web" order="9" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
+      <window_info id="Alibaba Cloud Explorer" order="0" weight="0.3295129" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.614841" visible="true" weight="0.26609442" />
+      <window_info id="Structure" order="2" sideWeight="0.38515902" side_tool="true" weight="0.25608012" />
+      <window_info id="Persistence" order="3" sideWeight="0.18412162" side_tool="true" weight="0.25679544" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Image Layers" order="8" />
+      <window_info id="Learn" order="9" />
+      <window_info id="Web" order="10" sideWeight="0.38515902" side_tool="true" weight="0.25608012" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.83547926" visible="true" weight="0.2807229" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.83547926" visible="true" weight="0.21994536" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928468" weight="0.329235" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32786885" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329235" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.16452074" side_tool="true" weight="0.2807229" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329235" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="15" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="CDI" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.116595134" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.06223176" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Alibaba Cloud Explorer" order="0" weight="0.3295129" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.614841" visible="true" weight="0.26609442" />
+      <window_info id="Structure" order="2" sideWeight="0.38515902" side_tool="true" weight="0.25608012" />
+      <window_info id="Persistence" order="3" sideWeight="0.18412162" side_tool="true" weight="0.25679544" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Image Layers" order="8" />
+      <window_info id="Learn" order="9" />
+      <window_info id="Web" order="10" sideWeight="0.38515902" side_tool="true" weight="0.25608012" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83547926" weight="0.21994536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928468" weight="0.329235" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32786885" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.16452074" side_tool="true" weight="0.2807229" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329235" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="15" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -731,44 +1154,6 @@
       <window_info anchor="right" id="CDI" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.116595134" />
       <window_info anchor="right" id="Database" order="7" visible="true" weight="0.115879826" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6161202" visible="true" weight="0.25250357" />
-      <window_info id="Structure" order="1" sideWeight="0.38387978" side_tool="true" weight="0.27825466" />
-      <window_info id="Persistence" order="2" sideWeight="0.18412162" side_tool="true" weight="0.25679544" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Image Layers" order="7" />
-      <window_info id="Learn" order="8" />
-      <window_info id="Web" order="9" sideWeight="0.50089765" side_tool="true" weight="0.24964234" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.83547926" weight="0.2807229" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928468" weight="0.329235" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32786885" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.329235" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.16452074" side_tool="true" weight="0.2807229" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329235" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="CDI" order="5" />
-      <window_info anchor="right" id="Maven Projects" order="6" weight="0.116595134" />
-      <window_info active="true" anchor="right" id="Database" order="7" visible="true" weight="0.115879826" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Bean Validation" order="10" />
@@ -785,49 +1170,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/UserAddressCombine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/OrderBookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/HibernateConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/CategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/TimeGeneratorInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/com/team404/bookstore/service/ProductCatalogAPITest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/test/com/team404/bookstore/service/OrderProcessAPITest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/OrderProcessAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -843,20 +1185,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ProductCatalogAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -877,9 +1209,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/team404/bookstore/entity/CountsEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/team404/bookstore/entity/BookEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="445">
@@ -897,13 +1226,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/team404/bookstore/entity/AddressEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/category">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/team404/bookstore/entity/UserEntity.hbm.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -914,13 +1236,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UserDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/ShoppingCartEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-230">
@@ -949,31 +1265,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="58" column="34" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1550283126649" expanded="true" signature="1604:2437" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/CountDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/CountDao.java" />
     <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/shoppingcart">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -988,17 +1280,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderServiceFacade.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AmountCalculator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/TimeGenerator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculatorInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AmountCalculatorInterface.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/AddressDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/ShoppingCartDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/DaoFactoryImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/BookDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/OrderDao.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDao.java" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDaoInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2655">
-          <caret line="177" column="48" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
+        <state relative-caret-position="60">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1012,51 +1312,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderServiceFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AmountCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" selection-start-line="12" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/TimeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" selection-start-line="11" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/PriceCalculatorInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/AmountCalculatorInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+    <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/entity/OrdersEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
+        <state relative-caret-position="1950">
           <caret line="175" selection-start-line="175" selection-end-line="175" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1064,78 +1329,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/AddressDao.java">
+    <entry file="jar://$PROJECT_DIR$/lib/ext/javax.json.bind-api-1.0.jar!/javax/json/bind/JsonbBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="135">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/ShoppingCartDao.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mariadb/jdbc/Driver.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/HibernateConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="11" column="83" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/DaoFactoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="525">
+          <caret line="42" selection-start-line="42" selection-start-column="2" selection-end-line="57" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/BookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/OrderDao.java">
+    <entry file="jar://$PROJECT_DIR$/lib/ext/javax.json.bind-api-1.0.jar!/javax/json/bind/Jsonb.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="90">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/ext/yasson-1.0.jar!/org/eclipse/yasson/internal/JsonBinding.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://1e5ab23e-285f-4611-80b1-62d897048564/schema/shopify_test/table/book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/NewUnifiedDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1310">
-          <caret line="177" column="39" lean-forward="true" selection-start-line="177" selection-start-column="39" selection-end-line="177" selection-end-column="39" />
+        <state relative-caret-position="1380">
+          <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDaoInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/dao/UnifiedDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-913">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/ProductCatalogAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="123" column="86" selection-start-line="123" selection-start-column="70" selection-end-line="123" selection-end-column="86" />
+        <state relative-caret-position="-640">
+          <caret line="94" column="26" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/team404/bookstore/service/OrderProcessAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="149" column="26" selection-start-line="149" selection-start-column="11" selection-end-line="149" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="20" column="114" selection-start-line="20" selection-start-column="114" selection-end-line="20" selection-end-column="114" />
         </state>
       </provider>
     </entry>
@@ -1145,7 +1436,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>ShopifyTest:Web exploded</last-edited>
+          <last-edited>ShopifyTest:Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

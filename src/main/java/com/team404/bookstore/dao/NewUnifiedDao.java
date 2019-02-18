@@ -2,10 +2,8 @@ package com.team404.bookstore.dao;
 import com.team404.bookstore.entity.AddressEntity;
 import com.team404.bookstore.entity.BookEntity;
 import com.team404.bookstore.entity.ShoppingCartEntity;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.*;
+import org.hibernate.cfg.Configuration;
 
 import java.lang.reflect.Method;
 import java.math.BigDecimal;

@@ -38,7 +38,7 @@ public class OrderProcessAPI {
 
         List<UserEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
-        if(list.size() == 0) {
+        if(list == null || list.size() == 0) {
             String errorMessage = "Wrong user name, Cannot find this user!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
         }
@@ -161,7 +161,7 @@ public class OrderProcessAPI {
 
         List<AddressEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
-        if(list.size() == 0) {
+        if(list == null || list.size() == 0) {
             String errorMessage = "Wroing User ID!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(errorMessage)).build();
         }
@@ -232,6 +232,11 @@ public class OrderProcessAPI {
 
         List<ShoppingCartEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
+        if(list == null || list.size() == 0) {
+            String erroMessage = "Error! Check the Database";
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(erroMessage)).build();
+        }
+        else
         return  Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
 
@@ -384,6 +389,11 @@ public class OrderProcessAPI {
 
         List<OrderBookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
+        if(list == null || list.size() == 0) {
+            String erroMessage = "Error! Check the Database";
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(erroMessage)).build();
+        }
+        else
         return  Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
 
@@ -402,7 +412,7 @@ public class OrderProcessAPI {
 
         List<OrderBookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
-        if(list.size() != 0) {
+        if(list == null || list.size() != 0) {
             return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
         }
         else {

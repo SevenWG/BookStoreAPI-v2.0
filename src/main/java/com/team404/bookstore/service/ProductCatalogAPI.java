@@ -3,6 +3,7 @@ package com.team404.bookstore.service;
 import com.team404.bookstore.dao.*;
 import com.team404.bookstore.entity.BookEntity;
 import com.team404.bookstore.entity.CategoryEntity;
+import org.eclipse.yasson.internal.JsonBinding;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -45,7 +46,13 @@ public class ProductCatalogAPI {
 
         List<CategoryEntity> list = unifiedDao.GetDynamicList(hql, 0, 0, map);
 
+        if(list == null || list.size() == 0) {
+            String erroMessage = "Error! Check the Database";
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(erroMessage)).build();
+        }
+        else
         return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
+
     }
 
 
@@ -67,6 +74,11 @@ public class ProductCatalogAPI {
 
         List<BookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
+        if(list == null || list.size() == 0) {
+            String erroMessage = "Error! Check the Database";
+            return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(erroMessage)).build();
+        }
+        else
         return Response.status(Response.Status.OK).entity(jsonb.toJson(list)).build();
     }
 
@@ -96,7 +108,7 @@ public class ProductCatalogAPI {
 
         List<BookEntity> list = unifiedDao.GetDynamicList(hql, firstResult, maxResult, map);
 
-        if(list.size() == 0) {
+        if(list == null || list.size() == 0) {
             String erroMessage = "Wrong Category or No book in this Category!";
             return Response.status(Response.Status.BAD_REQUEST).entity(jsonb.toJson(erroMessage)).build();
         }

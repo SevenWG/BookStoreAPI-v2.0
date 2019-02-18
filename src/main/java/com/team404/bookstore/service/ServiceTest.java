@@ -37,22 +37,25 @@ public class ServiceTest {
 //
 //        System.out.println(response.getStatusInfo().equals(Response.Status.OK));
 
-        ShoppingCartEntity shoppingCartEntity = new ShoppingCartEntity();
-        shoppingCartEntity.setBookid("1187189032");
-        shoppingCartEntity.setQuantity(3);
-        shoppingCartEntity.setUserid(21);
+        List<ShoppingCartEntity> list = null;
+        System.out.println(list.size());
 
-        String json1 = jsonb.toJson(shoppingCartEntity);
-        System.out.println(json1);
-
-        Response response = orderProcessAPI.DisplayShoppingCart(21);
-
-        List<ShoppingCartEntity> list = new ArrayList<>();
-
-        ShoppingCartEntity[] arr = jsonb.fromJson(response.getEntity().toString(), ShoppingCartEntity[].class);
-        list = Arrays.asList(arr);
-
-        System.out.println(list.get(0).getBookid());
+//        ShoppingCartEntity shoppingCartEntity = new ShoppingCartEntity();
+//        shoppingCartEntity.setBookid("1187189032");
+//        shoppingCartEntity.setQuantity(3);
+//        shoppingCartEntity.setUserid(21);
+//
+//        String json1 = jsonb.toJson(shoppingCartEntity);
+//        System.out.println(json1);
+//
+//        Response response = orderProcessAPI.DisplayShoppingCart(21);
+//
+//        List<ShoppingCartEntity> list = new ArrayList<>();
+//
+//        ShoppingCartEntity[] arr = jsonb.fromJson(response.getEntity().toString(), ShoppingCartEntity[].class);
+//        list = Arrays.asList(arr);
+//
+//        System.out.println(list.get(0).getBookid());
 //
 //        BigDecimal n = new BigDecimal(Double.valueOf(4096*4096));
 //        BigDecimal result = new BigDecimal(Double.valueOf(1));

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ShopifyTest:Web">
+    <output-path>$PROJECT_DIR$/out/artifacts/ShopifyTest_Web</output-path>
+    <root id="archive" name="ShopifyTest_Web.war">
+      <element id="artifact" artifact-name="ShopifyTest:Web exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/out/artifacts/ShopifyTest_Web_exploded" />
+    </root>
+  </artifact>
+</component>
